@@ -92,8 +92,12 @@ function Calculator() {
     
     
     // Events //
+    
+    // O start é um atributo do objeto Calculator, pois utiliza o this, que pode ser reutilizado na criação de um objeto;
     this.Start = () => { captureClic(); pressEnter()};
 
+    // OBS:  Os métodos com const não são globais, elas estão privadas dentro da função construtora.
+    
         const captureClic = () => {
         document.addEventListener('click', (e) => {
             const digit = e.target;
@@ -110,8 +114,8 @@ function Calculator() {
     }
   
     
-    // METHODS //
     
+    // METHODS //
         const result = () => {
             let conta = this.display.value;
     
