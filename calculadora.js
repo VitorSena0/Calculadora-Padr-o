@@ -104,7 +104,7 @@ function Calculator() {
             if (digit.classList.contains('btn-num')) InnerDigit(digit.innerText);
 
             
-            this.display.focus()
+            this.display.focus() // Resolve o bug do enter
             
         });
     }
